@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trending News</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <style>
+        #card {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+
+        /* Mobile  */
+        @media only screen and (max-width: 668px) {
+            #card {
+                grid-template-columns: repeat(1, 1fr);
+            }
+
+        }
+
+        /* Tablet */
+        @media only screen and (min-width: 669px) and (max-width: 992px) {
+            #card {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <section class="mb-5 pt-5 container">
+            <nav class="navbar navbar fixed-top  navbar-expand-lg bg-light ">
+                <div class="container d-flex justify-content-between">
+                    <div>
+                        <a class="navbar-brand fs-2 fw-bold text-info">Trending News</a>
+                    </div>
+
+                    <div class="d-flex">
+                        <a class="navbar-brand  px-3" href="#">News</a>
+                        <a class="navbar-brand " href="blog.html">Blog</a>
+                    </div>
+                </div>
+            </nav>
+            <hr>
+        </section>
+    </header>
+    <!-- News Ctagories -->
+    <section class="container">
+        <div id="ctagories" class="navbar bg-info">
+
+        </div>
+    </section>
+    <!-- Card Section -->
+    <section class="container mt-5">
+        <div class="cards" id="card">
+            <div class="card">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's
+                        content.</p>
+                </div>
+                <div class="card-body">
+                    <div class="d-flex justify-content-around">
+                        <div><img src="#" alt="..."><span>Name</span></div>
+                        <i class="fa-regular fa-eye"></i>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+
+
+
+
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+    <!-- My JavaScript -->
+    <script src="javas.js"></script>
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/9a5a4db17b.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
