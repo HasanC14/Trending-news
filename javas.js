@@ -27,32 +27,40 @@ const more = (id) => {
         .then(data => CardDisplay(data.data))
 }
 const CardDisplay = ctagories => {
-
+    const card = document.getElementById('card');
+    card.innerHTML = '';
     ctagories.forEach(ctagory => {
-        console.log(ctagory.title);
-        const card = document.getElementById('card');
+
         const CardBody = document.createElement('div');
         card.appendChild(CardBody);
         CardBody.classList.add('row');
         CardBody.innerHTML = `
-        <div class="col-12 mb-3">
-            <div class="card shadow-lg p-3 mb-3 bg-white rounded  ">
-                <img src="${ctagory.thumbnail_url}" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">${ctagory.title}</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                        of the
-                        card's
-                        content.</p>
-                </div>
-                <div class="card-body">
-                    <div class="d-flex justify-content-around">
+        <div class="col-12 mb-3 d-flex justify-content-center align-items-center">
+            <div class="card w-75 shadow-lg p-3 mb-3 bg-white rounded  ">
+                <div class="row">
+                    <div class="col-lg-6 col-md-12 col-sm-12 d-flex justify-content-center align-items-center">
+                            <img src="${ctagory.thumbnail_url}"
+                            class="card-img-top img-fluid w-75">
+                    </div>
+                    <div class="col-lg-6 col-md-12 col-sm-12 d-flex justify-content-center align-items-center">
+                    <div class="card-body">
+                            <h5 class="card-title">${ctagory.title}</h5>
+                            <p class="card-text">${ctagory.details.slice(0, 200)}</p>
+                            <div class="d-flex justify-content-around mt-5">
                         <div><img src="#" alt="..."><span>Name</span></div>
-                        <i class="fa-regular fa-eye"></i>
+                        <i class="fa-regular fa-eye"> ${ctagory.total_view}</i>
                         <i class="fa-solid fa-arrow-right"></i>
                     </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="card-body">
+                    
+                </div>
             </div>
-    </div>
+        </div>
         `;
     });
 }
