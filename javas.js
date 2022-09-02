@@ -45,19 +45,16 @@ const CardDisplay = ctagories => {
                     <div class="col-lg-6 col-md-12 col-sm-12 d-flex justify-content-center align-items-center">
                     <div class="card-body">
                             <h5 class="card-title">${ctagory.title}</h5>
-                            <p class="card-text">${ctagory.details.slice(0, 200)}</p>
+                            <p class="card-text">${ctagory.details.slice(0, 200)}${'...'}</p>
                             <div class="d-flex justify-content-around mt-5">
-                        <div><img src="#" alt="..."><span>Name</span></div>
-                        <i class="fa-regular fa-eye"> ${ctagory.total_view}</i>
-                        <i class="fa-solid fa-arrow-right"></i>
+                        <div><img src="${ctagory.author.img}" alt="..." class="avatar me-2"><span>${ctagory.author.name}</span></div>
+                        <i class="fa-regular fa-eye mt-3"> ${ctagory.total_view}</i>
+                        <i class="fa-solid fa-arrow-right mt-3"></i>
                     </div>
                         </div>
                     </div>
                 </div>
-
-
-                <div class="card-body">
-                    
+                <div class="card-body">          
                 </div>
             </div>
         </div>
