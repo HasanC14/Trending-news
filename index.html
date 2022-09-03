@@ -46,17 +46,27 @@
     <!-- Data Count -->
     <section class="container" id="DataCount">
     </section>
+    <!-- Sorting Menue -->
     <section class="container">
-        <div class="dropdown d-none" id="drop">
-            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                Sort By View
-            </button>
-            <ul class="dropdown-menu">
-                <li><a class="dropdown-item" onclick="sort(false)">Default</a></li>
-                <li><a class="dropdown-item" onclick="sort(true)">Top View</a></li>
-            </ul>
+        <div class="d-flex justify-content-between mt-3 bg-info p-3 border rounded-3">
+            <!-- Dropdown -->
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle bg-white text-dark" type="button"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    Sort By View
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" onclick="DefaultSort()">Default</a></li>
+                    <li><a class="dropdown-item" onclick="TopViewSort()">Top View</a></li>
+                </ul>
+            </div>
+            <!-- Trending -->
+            <div>
+                <button type="button" class="btn btn-outline-dark text-white fw-bold p-2 me-2">Trending</button>
+                <button type="button" class="btn btn-outline-dark text-white fw-bold p-2">Today's Pick</button>
+            </div>
         </div>
+
     </section>
     <!-- Loading Animation -->
     <div class="text-center d-none" id="loader">
@@ -67,20 +77,17 @@
     <!-- Card Section -->
     <section class="container mt-4" id="card">
     </section>
-
-
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <div class="modal-header bg-info">
+                    <h3 class="modal-title" id="exampleModalLabel">Full Article</h3>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
-                    ...
+                <div class="modal-body" id="modal_body">
                 </div>
-                <div class="modal-footer">
+                <div class="modal-footer bg-info">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                 </div>
             </div>
