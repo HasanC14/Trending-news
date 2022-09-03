@@ -15,10 +15,7 @@ const NavDisplay = ctagories => {
     });
 }
 
-
 LoadCtagories();
-
-
 
 const more = (id) => {
     const url = `https://openapi.programming-hero.com/api/news/category/${id}`
@@ -53,10 +50,7 @@ const CardDisplay = ctagories => {
                             <div class="d-flex justify-content-around mt-5">
                         <div><img src="${ctagory.author.img}" alt="..." class="avatar me-2"><span>${ctagory.author.name}</span></div>
                         <i class="fa-regular fa-eye mt-3"> ${ctagory.total_view}</i>
-                        <button type="button" class="btn btn-outline-info" data-bs-toggle="modal"
-                                    data-bs-target="#exampleModal">
-                                    Read More
-                                </button>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="modal('${ctagory.total_view})">See More</button>
                     </div>
                         </div>
                     </div>
@@ -70,23 +64,11 @@ const CardDisplay = ctagories => {
 }
 const modal = (MoadlDetails) => {
     console.log(MoadlDetails);
-    const modal = document.getElementById('exampleModal');
-    const p = document.createElement('div');
-    p.classList.add('modal-dialog');
-    p.innerHTML = `
-    <div class="modal-content">
-        <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body" id="ModalBody">
-            <p>${MoadlDetails}</p>
-        </div>
-        <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        </div>
-    </div>`;
-    modal.appendChild.add(p);
+    // const modal = document.getElementsByClassName('modal-body')
+    // const p = document.createElement('div');
+    // p.innerHTML = `
+    // <p></p>`;
+    // modal.appendChild.add(p);
 }
 
 
