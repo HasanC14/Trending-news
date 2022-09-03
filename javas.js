@@ -25,12 +25,14 @@ const more = (id) => {
     fetch(url)
         .then(res => res.json())
         .then(data => CardDisplay(data.data))
+    loader(true);
 }
+
 const CardDisplay = ctagories => {
+    NewsCount(ctagories.length);
     const card = document.getElementById('card');
     card.innerHTML = '';
     ctagories.forEach(ctagory => {
-
         const CardBody = document.createElement('div');
         card.appendChild(CardBody);
         CardBody.classList.add('row');
@@ -59,5 +61,24 @@ const CardDisplay = ctagories => {
             </div>
         </div>
         `;
+        loader(false);
     });
+}
+
+const NewsCount = (count) => {
+    const DataCount = document.getElementById('DataCount');
+    DataCount.innerHTML = ``;
+    const Data = document.createElement('div');
+    DataCount.appendChild(Data);
+    Data.innerHTML = `
+    <h2 class="text-center bg-light p-5">${count} News Found</h2>`;
+}
+
+
+const loader = (isloading) => {
+    const loader = document.getElementById('loader');
+    if (isloading) {
+        loader.classList.remove('d-none')
+    }
+    else loader.classList.add('d-none')
 }
