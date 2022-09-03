@@ -31,7 +31,10 @@
                             <div class="d-flex justify-content-around">
                                 <div><img src="#" alt="..."><span>Name</span></div>
                                 <i class="fa-regular fa-eye"></i>
-                                <i class="fa-solid fa-arrow-right"></i>
+                                <button type="button" class="btn btn-outline-info" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -70,6 +73,15 @@
             </div>
         </div>
     </div>
+
+
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
+        onclick="modal()">
+        Launch demo modal
+    </button>
+
+
 
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"

@@ -32,6 +32,8 @@ const CardDisplay = ctagories => {
     NewsCount(ctagories.length);
     const card = document.getElementById('card');
     card.innerHTML = '';
+    const drop = document.getElementById('drop');
+    drop.classList.remove('d-none');
     ctagories.forEach(ctagory => {
         const CardBody = document.createElement('div');
         card.appendChild(CardBody);
@@ -51,19 +53,43 @@ const CardDisplay = ctagories => {
                             <div class="d-flex justify-content-around mt-5">
                         <div><img src="${ctagory.author.img}" alt="..." class="avatar me-2"><span>${ctagory.author.name}</span></div>
                         <i class="fa-regular fa-eye mt-3"> ${ctagory.total_view}</i>
-                        <i class="fa-solid fa-arrow-right mt-3"></i>
+                        <button type="button" class="btn btn-outline-info" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal">
+                                    Read More
+                                </button>
                     </div>
                         </div>
                     </div>
                 </div>
-                <div class="card-body">          
-                </div>
             </div>
         </div>
         `;
+
         loader(false);
     });
 }
+const modal = (MoadlDetails) => {
+    console.log(MoadlDetails);
+    const modal = document.getElementById('exampleModal');
+    const p = document.createElement('div');
+    p.classList.add('modal-dialog');
+    p.innerHTML = `
+    <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" id="ModalBody">
+            <p>${MoadlDetails}</p>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+    </div>`;
+    modal.appendChild.add(p);
+}
+
+
 
 const NewsCount = (count) => {
     const DataCount = document.getElementById('DataCount');
@@ -80,5 +106,11 @@ const loader = (isloading) => {
     if (isloading) {
         loader.classList.remove('d-none')
     }
-    else loader.classList.add('d-none')
+    else {
+        loader.classList.add('d-none')
+    }
+}
+
+const sort = (states) => {
+
 }

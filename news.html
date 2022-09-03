@@ -46,6 +46,18 @@
     <!-- Data Count -->
     <section class="container" id="DataCount">
     </section>
+    <section class="container">
+        <div class="dropdown d-none" id="drop">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Sort By View
+            </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" onclick="sort(false)">Default</a></li>
+                <li><a class="dropdown-item" onclick="sort(true)">Top View</a></li>
+            </ul>
+        </div>
+    </section>
     <!-- Loading Animation -->
     <div class="text-center d-none" id="loader">
         <div class="spinner-border" role="status">
@@ -55,6 +67,9 @@
     <!-- Card Section -->
     <section class="container mt-4" id="card">
     </section>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    </div>
 
 
 
