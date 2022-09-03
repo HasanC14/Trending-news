@@ -56,8 +56,8 @@
                     Sort By View
                 </button>
                 <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" onclick="DefaultSort()">Default</a></li>
-                    <li><a class="dropdown-item" onclick="TopViewSort()">Top View</a></li>
+                    <li><a class="dropdown-item">Default</a></li>
+                    <li><a class="dropdown-item">Top View</a></li>
                 </ul>
             </div>
             <!-- Trending -->
@@ -69,11 +69,17 @@
 
     </section>
     <!-- Loading Animation -->
-    <div class="text-center d-none" id="loader">
+    <div class="text-center d-none m-4" id="loader">
         <div class="spinner-border" role="status">
             <span class="visually-hidden">Loading...</span>
         </div>
     </div>
+    <!-- No Data Found Message -->
+    <section class="container">
+        <div>
+            <h1 class="d-none text-center m-5" id="Warning">Sorry! No Data was found on this Section</h1>
+        </div>
+    </section>
     <!-- Card Section -->
     <section class="container mt-4" id="card">
     </section>
